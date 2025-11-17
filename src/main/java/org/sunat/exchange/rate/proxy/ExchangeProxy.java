@@ -5,7 +5,7 @@ import jakarta.ws.rs.Path;
 import org.eclipse.microprofile.rest.client.inject.RegisterRestClient;
 import org.sunat.exchange.rate.model.api.Exchange;
 
-@RegisterRestClient(baseUri = "https://free.e-api.net.pe")
+@RegisterRestClient(configKey ="exchange-proxy")
 public interface ExchangeProxy {
   @GET
   @Path("/tipo-cambio/today.json")

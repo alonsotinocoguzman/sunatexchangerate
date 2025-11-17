@@ -1,7 +1,6 @@
 package org.sunat.exchange.rate.mapper;
 
 
-import org.mapstruct.BeanMapping;
 import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;
 import org.mapstruct.factory.Mappers;
@@ -18,7 +17,7 @@ public interface UserMapper {
     @Mapping(target = "sunat", expression = "java(exchange.getSunat())")
     @Mapping(target = "buy", expression = "java(exchange.getCompra())")
     @Mapping(target = "sell", expression = "java(exchange.getVenta())")
-    //@BeanMapping(builder = @org.mapstruct.Builder(buildMethod = "build"))
+        //@BeanMapping(builder = @org.mapstruct.Builder(buildMethod = "build"))
     Users toUsers(Exchange exchange, String dni);
 
     UserDomain toUserDomainBuild(Users users);
